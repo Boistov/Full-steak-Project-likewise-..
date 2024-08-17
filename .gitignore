@@ -1,0 +1,6 @@
+.venv
+customer/__pycache__
+delivery/__pycache__
+restourant/__pycache__
+db.sqlite3
+restourant/base.html
