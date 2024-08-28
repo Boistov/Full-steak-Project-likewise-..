@@ -71,3 +71,11 @@ class MenuDelete(View):
 class DashboardView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'customer/dashboard.html') 
+    
+
+
+class AdminMenuView(View):
+    def get(self, request, *args, **kwargs):
+        menu_items = MenuItem.objects.all()
+        context = {'menu_items': menu_items}
+        return render(request, 'admin/admin_menu.html', context)

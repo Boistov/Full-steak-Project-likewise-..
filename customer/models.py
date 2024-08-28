@@ -26,6 +26,10 @@ class Dish(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='dishes/')
     category = models.ForeignKey(Category, related_name='dishes', on_delete=models.CASCADE)
+    kalories = models.DecimalField(max_digits=6, decimal_places=2)
+    fat = models.DecimalField(max_digits=6, decimal_places=2)
+    protein = models.DecimalField(max_digits=6, decimal_places=2)
+    carbs = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name
