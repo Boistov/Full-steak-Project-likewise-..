@@ -6,7 +6,7 @@ from customer.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Index.as_view(), name='index'),
+    path('salom/', Index.as_view(), name='index'),
     path('aboute/', Aboute.as_view(), name='about'),
     path('menu/', MenuView.as_view(), name='menu'),
     path('order/', Order.as_view(), name='order'),
